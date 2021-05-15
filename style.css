@@ -19,7 +19,7 @@
   font-size: 80px;
   font-weight: 400;
   text-align: center;
-  padding: 50px;
+  padding-top: 70px;
   text-transform: uppercase;
   padding-bottom: 10px;
 }
@@ -52,7 +52,7 @@ input {
   
 }
 input[type=submit] {
-  width: 10%;
+  width: 20%;
   background: rgb(216, 74, 18);
   color: white;
   text-transform: uppercase;
@@ -107,3 +107,31 @@ p.message {
   padding-top: 50px;
 }
 
+
+@media screen and (max-width:900px) {
+  .container {
+    height: 1300px;
+  }
+  .resultat {
+    width: 90%;
+  }
+
+  form {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input {
+    width: 80%;
+  }
+
+  input[type=submit] {
+    width: 50%;
+  }
+
+  p.corpu {
+height: 150px;
+  }
+
+}
