@@ -23,11 +23,14 @@
       <div class="resultat">
         <?php 
           include_once "imc.php";
+          
           echo '
           <h2> Votre IMC est de </h2>
           <p class="imc">' . $imc . '</p>
           <p class="corpu">' . $corpu . '</p>
           <p class="message"> ' . $error_message .'</p>';
+        
+         
         ?>
       </div>
     </main>
