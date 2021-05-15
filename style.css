@@ -80,7 +80,8 @@ main h2 {
 }
 
 p.imc,
-p.corpu {
+p.corpu
+ {
   background: rgba(255, 255, 255, 0.322);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 8px );
@@ -104,5 +105,11 @@ p.corpu {
 p.corpu {
   width: 100%;
   margin-top: 50px;
+}
+
+p.message {
+  font-size: 1.5rem;
+  color: white;
+  padding-top: 50px;
 }
 

@@ -27,7 +27,7 @@
           <h2> Votre IMC est de </h2>
           <p class="imc">' . $imc . '</p>
           <p class="corpu">' . $corpu . '</p>
-          <p> ' . $error_message .'</p>';
+          <p class="message"> ' . $error_message .'</p>';
         ?>
       </div>
     </main>
