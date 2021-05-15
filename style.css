@@ -124,6 +124,7 @@ p.message {
   }
   input {
     width: 80%;
+    font-size: 1rem;
   }
 
   input[type=submit] {
@@ -131,7 +132,7 @@ p.message {
   }
 
   p.corpu {
-height: 150px;
+    height: 150px;
   }
 
 }
