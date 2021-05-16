@@ -9,13 +9,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   $taille = htmlspecialchars( $_POST['taille']);
 
   if (isset($_POST['poids']) && isset($_POST['taille'])){
+    $taille = str_replace(",",".", $taille);
     if (is_numeric($poids) && is_numeric($taille) && ($poids > 0) && ($taille > 0) && ($poids < 180) && ($taille < 2.5)  ) {
       // Calcul IMC
       // IMC arrondi à 1 décimale à l'entier le plus proche
-       $imc = round($poids/($taille*$taille), 1, PHP_ROUND_HALF_EVEN);
+      $imc = round($poids/($taille*$taille), 1, PHP_ROUND_HALF_EVEN);
       // Classification IMC
       switch($imc) {
-          case $imc < 18.5 && $imc > 0:
+        case $imc < 18.5 && $imc > 0:
             $corpu = "Vous êtes en insuffisance pondérale";
             break;
           case $imc >= 18.5 && $imc < 25:
