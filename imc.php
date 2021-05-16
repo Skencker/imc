@@ -9,6 +9,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   $taille = htmlspecialchars( $_POST['taille']);
 
   if (isset($_POST['poids']) && isset($_POST['taille'])){
+    //remplace la virgule par un point 
     $taille = str_replace(",",".", $taille);
     if (is_numeric($poids) && is_numeric($taille) && ($poids > 0) && ($taille > 0) && ($poids < 180) && ($taille < 2.5)  ) {
       // Calcul IMC
@@ -29,8 +30,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $corpu = "Vous êtes en Obésité";
             break;
       } 
-      unset ($_taille);
-      unset ($_poids);
     } else {
         $error_message = 'Vous devez renseigner un poids et une taille valide, poids en kg et taille en m. ';
     }    
